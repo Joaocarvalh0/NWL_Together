@@ -19,6 +19,7 @@ export function AppRoutes() {
                     backgroundColor: theme.colors.secondary100
                 }
             }}
+            initialRouteName='Home'
         >
             <Screen
                 name="SignIn"

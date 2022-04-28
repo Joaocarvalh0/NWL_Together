@@ -22,8 +22,8 @@ export function SignIn() {
     async function handleSignIn() {
         try {
             await signIn();
-        } catch (error) {
-            Alert.alert(error);
+        } catch (error: any) {
+            Alert.alert(String(error.message));
         }
     }
 

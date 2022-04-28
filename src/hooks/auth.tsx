@@ -59,13 +59,13 @@ function AuthProvider({ children }: AuthProviderProps) {
 
             const { type, params } = await AuthSession
                 .startAsync({ authUrl }) as AuthorizationResponse;
-
             if (type === "success" && !params.error) {
-                api.defaults.headers.authorization = `Bearer ${params.acsess_token}`;
+                api.defaults.headers.authorization = `Bearer ${params.access_token}`;
 
                 const userInfo = await api.get('/users/@me');
+                console.log(userInfo)
 
-                const firstName = userInfo.data.username.split('')[0];
+                const firstName = userInfo.data.username.split(' ')[0];
                 userInfo.data.avatar = `${CDN_IMAGE}/avatars/${userInfo.data.id}/${userInfo.data.avatar}.png`
 
                 const userData = {
