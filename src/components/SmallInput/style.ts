@@ -6,14 +6,13 @@ export const styles = StyleSheet.create({
         width: 48,
         height: 48,
         backgroundColor: theme.colors.secondary40,
-        borderRadius: 8,
         color: theme.colors.heading,
+        borderRadius: 8,
         fontFamily: theme.fonts.text400,
         fontSize: 13,
         marginRight: 4,
+        textAlign: 'center',
         borderWidth: 1,
         borderColor: theme.colors.secondary50,
-        paddingHorizontal: 16,
-        textAlignVertical: 'top'
     }
 });
